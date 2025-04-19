@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Urbanist&display=swap');
+/* =============================
+  Base Layout and Typography
+============================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background-color: #1e2a38; /* Primary */
+  color: #f8f9fa; /* Secondary */
+}
+
+a {
+  color: #f4c542;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+  Buttons
+============================= */
+button {
+  background-color: #f4c542; /* Accent */
+  color: #1e2a38; /* Dark text on bright button */
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4a932;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+/* =============================
+  Navbar
+============================= */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 1rem 0 1rem;
+  background-color: #293b4d;
+  height: 100vh;
+  width: 200px; /* Fixed width is better than 10vw for consistency */
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 1.1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  color: #f4c542;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
+.navbar img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* =============================
+  Home Page
+============================= */
+.home-container {
+  height: 100vh;
+}
+
+.home-container h1 {
+  color: #f4c542;
+  font-size: 3rem;
+}
+
+.home-container p {
+  color: #f8f9fa;
+  font-size: 1.5rem;
+}
+
+.banner {
+  background-size: fill;
+  background-position: center;
+  width: 75vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* =============================
+  Content Layout
+============================= */
+.content {
+  margin-left: 200px; /* Match navbar width */
+  padding: 2rem;
+  background-color: #1e2a38;
+  max-width: calc(100% - 200px); /* Prevents overflow */
+  overflow-x: hidden;
+}
+
+/* =============================
+  Create Crew Page
+============================= */
+.create-crew-container {
+  background-color: #f8f9fa; /* Secondary */
+  color: #1e2a38;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+  margin: 5rem auto;
+}
+
+.create-crew-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.create-crew-form h1 {
+  color: #1e2a38;
+}
+
+.create-crew-form p {
+  color: #1e2a38;
+}
+
+
+.create-crew-form label {
+  font-weight: bold;
+}
+
+.create-crew-form input[type="text"],
+.create-crew-form input[type="number"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+
+.create-crew-form fieldset {
+  border: none;
+  margin-top: 1rem;
+}
+
+.create-crew-form fieldset legend {
+  font-weight: bold;
+}
+
+.create-crew-form label input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* =============================
+  Update Crew Page
+============================= */
+.update-crew-container {
+  background-color: #f8f9fa;
+  color: #1e2a38;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  margin: 5rem auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.update-buttons-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.delete-crew-member {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.delete-crew-member:hover {
+  background-color: #a71d2a;
+}
+
+
+/* =============================
+  Crew Cards
+============================= */
+.crew-member-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.member-card-container {
+  background-color: #f8f9fa;
+  color: #1e2a38;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: calc(25% - 2rem); /* Four cards per row */
+}
+
+.member-card-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.member-card-container a {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #1e2a38;
+}
+.member-card-container a:hover {
+  text-decoration: none;
+}
+
+/* =============================
+  Loading State
+============================= */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+  color: #f4c542;
+}
+
+.loading img {
+  width: 80px;
+  height: 80px;
+  margin-top: 1rem;
+}
+
+/* =============================
+   Crewmate Info Page
+============================= */
+.crewmate-info-container {
+  background-color: #f8f9fa;
+  color: #1e2a38;
+  padding: 2rem;
+  margin: 5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+}
+
+.crewmate-details {
+  text-align: center;
+}
+
+.crewmate-details img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crewmate-details h2 {
+  margin: 1rem 0 0.5rem;
+  font-size: 2rem;
+  color: #1e2a38;
+}
+
+.crewmate-details p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.back-button {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.back-button button {
+  background-color: #f4c542;
+  color: #1e2a38;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button button:hover {
+  background-color: #d4a932;
+}
+
+/* =============================
+  Responsive Design
+============================= */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .create-crew-container,
+  .update-crew-container {
+    width: 100%;
+    padding: 1rem;
+  }
+}
