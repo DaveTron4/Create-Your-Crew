@@ -2,7 +2,7 @@
 
 Submitted by: **David Salas C.**
 
-This web app: **insert description**
+This web app: **Create Your Crew is a web app inspired by the world of One Piece that allows users to build and manage a personalized pirate crew. You can add, view, update, and delete crewmates — each with unique attributes such as name, devil fruit, fruit type, and height. The app is built with a modern tech stack, styled with a responsive UI, and powered by Supabase for backend data storage.**
 
 Time spent: **7** hours spent in total
 
@@ -49,7 +49,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/tLJ0wNT.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif  
