@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import '../App.css'
 import { supabase } from '../client';
+import { format } from 'date-fns'; 
 
 
 function CrewmateInfo() {
@@ -43,7 +44,7 @@ function CrewmateInfo() {
                     <p>Fruit Type: {crewMember.fruit_type}</p>
                     <p>Devil Fruit Desciption: {crewMember.description}</p>
                     <p>Height: {crewMember.height} cm</p>
-                    <p>Date Added: {crewMember.created_at}</p>
+                    <p>Date Added: {format(new Date(crewMember.created_at), 'MMMM dd, yyyy hh:mm:ss a')}</p>
                 </div>
             ) : (
                 <div className="loading">

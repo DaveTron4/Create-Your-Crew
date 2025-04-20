@@ -1,5 +1,6 @@
 import '../App.css'
 import { Link, useNavigate } from 'react-router-dom';
+import { format } from 'date-fns';
 
 function MemberCard({member}) {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ function MemberCard({member}) {
                 <p>Devil Fruit: {member.devil_fruit}</p>
                 <p>Fruit Type: {member.fruit_type}</p>
                 <p>Height: {member.height} cm</p>
-                <p>Date Added: {member.created_at}</p>
+                <p>Date Added: {format(new Date(crewMember.created_at), 'MMMM dd, yyyy hh:mm:ss a')}</p>
             </Link>  
             <button className="edit-crew-member" onClick={handleEdit}>Edit Crewmate</button>  
         </div>
