@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { useRoutes } from 'react-router-dom'
+import { useRoutes, Link } from 'react-router-dom'
 import CreateCrew from './components/CreateCrew.jsx'
 import CrewGallery from './components/CrewGallery.jsx'
 import Home from './components/Home.jsx'
@@ -69,9 +69,9 @@ function App() {
       <div className="navbar">
         <ul>
           <li><img src='https://www.freepnglogos.com/uploads/one-piece-logo-18.png' alt='logo'></img></li>
-          <li><a href="/">Home</a></li>
-          <li><a href="/create_crewmate">Create Crew</a></li>
-          <li><a href="/crewmates">Crew Gallery</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/create_crewmate">Create Crew</Link></li>
+          <li><Link to="/crewmates">Crew Gallery</Link></li>
         </ul>
       </div>
       <div className="content">
