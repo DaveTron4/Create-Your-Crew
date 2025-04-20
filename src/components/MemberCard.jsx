@@ -17,7 +17,7 @@ function MemberCard({member}) {
                 <p>Devil Fruit: {member.devil_fruit}</p>
                 <p>Fruit Type: {member.fruit_type}</p>
                 <p>Height: {member.height} cm</p>
-                <p>Date Added: {format(new Date(crewMember.created_at), 'MMMM dd, yyyy hh:mm:ss a')}</p>
+                <p>Date Added: {format(new Date(member.created_at), 'MMMM dd, yyyy hh:mm:ss a')}</p>
             </Link>  
             <button className="edit-crew-member" onClick={handleEdit}>Edit Crewmate</button>  
         </div>
