@@ -43,6 +43,7 @@ function CrewmateInfo() {
                     <p>Fruit Type: {crewMember.fruit_type}</p>
                     <p>Devil Fruit Desciption: {crewMember.description}</p>
                     <p>Height: {crewMember.height} cm</p>
+                    <p>Date Added: {crewMember.created_at}</p>
                 </div>
             ) : (
                 <div className="loading">
